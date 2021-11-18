@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import TodoList from "./TodoList";
 
 const Todo = ({ todos, setTodos, task, setTask }) => {

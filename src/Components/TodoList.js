@@ -12,10 +12,11 @@ const TodoList = ({ todos, setTodos, task, todo, index }) => {
 
   const handleSubmitEdit = (e) => {
     e.preventDefault();
-    if (index == todo.id) {
+    if (index === todo.id) {
       todo.title = newTodo;
     }
-    console.log(todo);
+    console.log(index);
+    console.log(todo.id);
     setEditMode(false);
   };
 
@@ -25,7 +26,10 @@ const TodoList = ({ todos, setTodos, task, todo, index }) => {
   const handleDelete = () => {
     let filtered = todos.filter((e) => e !== todo);
     setTodos(filtered);
+    index += 1;
+    console.log(index);
   };
+  console.log(index);
 
   return (
     <>
